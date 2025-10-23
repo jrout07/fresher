@@ -14,7 +14,18 @@ tsParticles.load("particles-js", {
         { src: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg", width: 35, height: 35 },
         { src: "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg", width: 35, height: 35 },
         { src: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg", width: 35, height: 35 },
-        { src: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Tsparticles_logo.svg", width: 35, height: 35 }
+        { src: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Tsparticles_logo.svg", width: 35, height: 35 },
+        { src: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Node.js_logo.svg", width: 35, height: 35 },
+        { src: "https://upload.wikimedia.org/wikipedia/commons/1/1b/React-icon.svg", width: 35, height: 35 },
+        { src: "https://upload.wikimedia.org/wikipedia/commons/2/27/Git-logo.svg", width: 35, height: 35 },
+        { src: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg", width: 35, height: 35 },
+        { src: "https://upload.wikimedia.org/wikipedia/commons/7/73/R_logo.svg", width: 35, height: 35 },
+        { src: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Go_Logo_Blue.svg", width: 35, height: 35 },
+        { src: "https://upload.wikimedia.org/wikipedia/commons/8/87/JavaScript-logo.svg", width: 35, height: 35 },
+        { src: "https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png", width: 35, height: 35 },
+        { src: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Swift_logo.svg", width: 35, height: 35 },
+        { src: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Docker_icon.svg", width: 35, height: 35 },
+        { src: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Postgresql_elephant.svg", width: 35, height: 35 }
       ]
     },
     color: { 
