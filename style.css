@@ -31,9 +31,6 @@ audio { display: none; }
 }
 
 /* Header Section */
-.event-header {
-  margin-bottom: 70px;
-}
 .university-name {
   width: 100%;
   text-align: center;
@@ -50,6 +47,9 @@ audio { display: none; }
   z-index: 1;
 }
 
+.event-header {
+  margin-bottom: 70px;
+}
 .presented-by {
   font-size: 1rem;
   color: #aaaaaa; /* subtle grey for small text */
