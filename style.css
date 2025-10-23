@@ -110,14 +110,29 @@ audio { display: none; }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Countdown Title */
+.countdown-title {
+  font-size: 1 rem;
+  color: #ffd700; /* secondary accent gold for countdown title */
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(255,215,0,0.8), 0 0 20px rgba(255,215,0,0.4);
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* Countdown Container */
 .countdown-box.horizontal {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px; /* smaller gap between units */
-  margin-bottom: 50px; /* reduced spacing */
-  flex-wrap: wrap; /* wrap on smaller screens */
+  gap: 25px;
+  margin-bottom: 80px;
+  flex-wrap: wrap; /* ensures it wraps on very small screens */
 }
 
 /* Individual Unit */
@@ -129,48 +144,83 @@ audio { display: none; }
 
 /* Flip Card (number) */
 .flip-card {
-  width: 60px;  /* smaller width */
-  height: 60px; /* smaller height */
+  width: 90px;       /* desktop size */
+  height: 90px;
   background: rgba(255, 215, 0, 0.15);
   border: 2px solid #ffd700;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 10px #ffd700, 0 0 20px rgba(255,215,0,0.5);
-  font-size: 2rem; /* smaller font */
+  box-shadow: 0 0 15px #ffd700, 0 0 30px rgba(255,215,0,0.5);
+  font-size: 3rem;
   font-weight: bold;
   color: #ffd700;
-  text-shadow: 0 0 8px #ffd700;
+  text-shadow: 0 0 10px #ffd700;
   transition: transform 0.3s ease;
 }
 
 .flip-unit:hover .flip-card {
-  transform: scale(1.05); /* smaller hover scale */
+  transform: scale(1.1);
 }
 
 /* Unit Label */
 .unit-label {
-  margin-top: 0.3rem;
-  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
   color: #ffffffcc;
   text-transform: uppercase;
-  text-shadow: 0 0 4px #ffffffcc;
+  text-shadow: 0 0 5px #ffffffcc;
 }
 
-/* Responsive Adjustments for smaller screens */
+/* Mobile & Tablet Adjustments */
+@media (max-width: 1024px) {
+  .flip-card {
+    width: 75px;
+    height: 75px;
+    font-size: 2.4rem;
+  }
+
+  .unit-label {
+    font-size: 1.1rem;
+  }
+
+  .countdown-box.horizontal {
+    gap: 20px;
+  }
+}
+
 @media (max-width: 768px) {
-  .flip-card { width: 50px; height: 50px; font-size: 1.6rem; }
-  .unit-label { font-size: 0.8rem; }
-  .countdown-box.horizontal { gap: 10px; margin-bottom: 40px; }
+  .flip-card {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .unit-label {
+    font-size: 1rem;
+  }
+
+  .countdown-box.horizontal {
+    gap: 15px;
+  }
 }
 
 @media (max-width: 480px) {
-  .flip-card { width: 40px; height: 40px; font-size: 1.2rem; }
-  .unit-label { font-size: 0.7rem; }
-  .countdown-box.horizontal { gap: 8px; margin-bottom: 30px; }
-}
+  .flip-card {
+    width: 50px;
+    height: 50px;
+    font-size: 1.6rem;
+  }
 
+  .unit-label {
+    font-size: 0.9rem;
+  }
+
+  .countdown-box.horizontal {
+    gap: 10px;
+  }
+}
 
 /* Boxes */
 .box {
