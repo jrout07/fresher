@@ -83,25 +83,28 @@ audio { display: none; }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Countdown */
+/* Countdown Container */
 .countdown-box.horizontal {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 25px;
   margin-bottom: 80px;
+  flex-wrap: wrap; /* ensures it wraps on very small screens */
 }
 
+/* Individual Unit */
 .flip-unit {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Flip Card (number) */
 .flip-card {
-  width: 90px;
+  width: 90px;       /* desktop size */
   height: 90px;
-  background: rgba(255, 215, 0, 0.15); /* translucent gold */
+  background: rgba(255, 215, 0, 0.15);
   border: 2px solid #ffd700;
   border-radius: 12px;
   display: flex;
@@ -119,12 +122,62 @@ audio { display: none; }
   transform: scale(1.1);
 }
 
+/* Unit Label */
 .unit-label {
   margin-top: 0.5rem;
   font-size: 1.2rem;
   color: #ffffffcc;
   text-transform: uppercase;
   text-shadow: 0 0 5px #ffffffcc;
+}
+
+/* Mobile & Tablet Adjustments */
+@media (max-width: 1024px) {
+  .flip-card {
+    width: 75px;
+    height: 75px;
+    font-size: 2.4rem;
+  }
+
+  .unit-label {
+    font-size: 1.1rem;
+  }
+
+  .countdown-box.horizontal {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .flip-card {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .unit-label {
+    font-size: 1rem;
+  }
+
+  .countdown-box.horizontal {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .flip-card {
+    width: 50px;
+    height: 50px;
+    font-size: 1.6rem;
+  }
+
+  .unit-label {
+    font-size: 0.9rem;
+  }
+
+  .countdown-box.horizontal {
+    gap: 10px;
+  }
 }
 
 /* Boxes with solid background to block particles */
