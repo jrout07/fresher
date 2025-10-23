@@ -34,6 +34,15 @@ audio { display: none; }
 .event-header {
   margin-bottom: 70px;
 }
+.university-name {
+  font-size: 1.2rem;       /* slightly larger for visibility */
+  color: #ffffffcc;        /* off-white for subtlety */
+  letter-spacing: 1.5px;   /* spacing for readability */
+  text-transform: uppercase; /* makes it look formal */
+  margin-bottom: 5px;      /* small space below */
+  font-weight: 500;        /* medium weight */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4); /* subtle glow */
+}
 
 .presented-by {
   font-size: 1rem;
