@@ -35,13 +35,18 @@ audio { display: none; }
   margin-bottom: 70px;
 }
 .university-name {
-  font-size: 1.2rem;       /* slightly larger for visibility */
-  color: #ffffffcc;        /* off-white for subtlety */
-  letter-spacing: 1.5px;   /* spacing for readability */
-  text-transform: uppercase; /* makes it look formal */
-  margin-bottom: 5px;      /* small space below */
-  font-weight: 500;        /* medium weight */
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4); /* subtle glow */
+  display: inline-block; /* so padding and background apply neatly */
+  background: rgba(17,17,17,0.8); /* dark semi-transparent box */
+  padding: 0.5rem 1rem; /* space around text */
+  border-radius: 8px; /* rounded corners */
+  border: 1px solid rgba(255,255,255,0.2); /* subtle border like footer */
+  color: #ffffffcc; /* off-white text */
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-shadow: 0 0 5px rgba(255,255,255,0.3); /* soft glow */
+  margin-bottom: 5px;
 }
 
 .presented-by {
