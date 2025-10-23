@@ -1,18 +1,24 @@
-/* Base */
-body, html {
+/* Base Reset */
+html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
   height: 100%;
-  background: #000; /* black background to make particles & glow pop */
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: #000;
+  color: #ffffffcc;
   overflow-x: hidden;
-  color: #ffffffcc; /* off-white for readability */
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 /* Hide audio element */
 audio { display: none; }
 
-/* Particle background */
+/* Particle Background */
 #particles-js {
   position: fixed;
   top: 0;
@@ -22,29 +28,20 @@ audio { display: none; }
   z-index: 0; 
 }
 
-/* Container */
+/* Container for content */
 .container {
   position: relative;
-  z-index: 1; /* above particles */
-  text-align: center;
-  padding: 10px;
-}
-
-/* Header Section */
-.event-header {
-  margin: 0;
-  padding: 0; 
-  text-align: center;
-  position: relative;
   z-index: 1;
+  text-align: center;
+  padding: 0; /* remove extra padding */
 }
 
-/* University Name like footer, flush with top */
+/* University Name - like a top footer */
 .university-name {
   display: block;
   width: 100%;
   text-align: center;
-  background: #111; /* same as footer */
+  background: #111; 
   color: #ffffffcc;
   font-size: 1rem;
   letter-spacing: 1px;
@@ -53,18 +50,27 @@ audio { display: none; }
   border-bottom: 1px solid rgba(255,255,255,0.2);
   box-shadow: 0 2px 10px rgba(0,0,0,0.4);
   padding: 0.8rem 0;
+  margin: 0; /* remove all margin */
 }
 
-/* Optional: keep h1 and presented-by with proper spacing */
+/* Header Section */
+.event-header {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Presented by */
 .presented-by {
   font-size: 1rem;
   color: #aaaaaa;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin: 10px 0 8px 0; /* only vertical margin */
+  margin: 0.5rem 0 8px 0;
   font-weight: 500;
 }
 
+/* Event title */
 .event-header h1 {
   font-size: 3.8rem;
   margin: 0;
@@ -77,7 +83,7 @@ audio { display: none; }
   animation: glowPulse 3s ease-in-out infinite;
 }
 
-/* Glow Animation */
+/* Glow animation */
 @keyframes glowPulse {
   0%, 100% {
     text-shadow: 0 0 15px rgba(255,77,109,0.9),
@@ -89,10 +95,10 @@ audio { display: none; }
   }
 }
 
-/* Countdown Title */
+/* Countdown title */
 .countdown-title {
-  font-size: 1 rem;
-  color: #ffd700; /* secondary accent gold for countdown title */
+  font-size: 1rem;
+  color: #ffd700;
   letter-spacing: 2px;
   margin-bottom: 30px;
   text-shadow: 0 0 10px rgba(255,215,0,0.8), 0 0 20px rgba(255,215,0,0.4);
@@ -111,19 +117,19 @@ audio { display: none; }
   align-items: center;
   gap: 25px;
   margin-bottom: 80px;
-  flex-wrap: wrap; /* ensures it wraps on very small screens */
+  flex-wrap: wrap;
 }
 
-/* Individual Unit */
+/* Flip unit */
 .flip-unit {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Flip Card (number) */
+/* Flip card */
 .flip-card {
-  width: 90px;       /* desktop size */
+  width: 90px;
   height: 90px;
   background: rgba(255, 215, 0, 0.15);
   border: 2px solid #ffd700;
@@ -143,7 +149,7 @@ audio { display: none; }
   transform: scale(1.1);
 }
 
-/* Unit Label */
+/* Unit label */
 .unit-label {
   margin-top: 0.5rem;
   font-size: 1.2rem;
@@ -152,64 +158,15 @@ audio { display: none; }
   text-shadow: 0 0 5px #ffffffcc;
 }
 
-/* Mobile & Tablet Adjustments */
-@media (max-width: 1024px) {
-  .flip-card {
-    width: 75px;
-    height: 75px;
-    font-size: 2.4rem;
-  }
-
-  .unit-label {
-    font-size: 1.1rem;
-  }
-
-  .countdown-box.horizontal {
-    gap: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .flip-card {
-    width: 60px;
-    height: 60px;
-    font-size: 2rem;
-  }
-
-  .unit-label {
-    font-size: 1rem;
-  }
-
-  .countdown-box.horizontal {
-    gap: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .flip-card {
-    width: 50px;
-    height: 50px;
-    font-size: 1.6rem;
-  }
-
-  .unit-label {
-    font-size: 0.9rem;
-  }
-
-  .countdown-box.horizontal {
-    gap: 10px;
-  }
-}
-
-/* Boxes with solid background to block particles */
+/* Boxes */
 .box {
   position: relative;
-  background: #111; /* solid dark background hides particles inside box */
+  background: #111;
   padding: 2rem 2.5rem;
   border-radius: 1rem;
   max-width: 700px;
   margin: 2rem auto;
-  border-left: 5px solid #ff4d6d; /* primary accent */
+  border-left: 5px solid #ff4d6d;
   box-shadow: inset 0 0 10px rgba(255,255,255,0.05), 0 0 15px rgba(255,255,255,0.2);
   text-align: left;
   transition: all 0.3s ease;
@@ -225,13 +182,13 @@ audio { display: none; }
 
 .note {
   font-size: 0.9rem;
-  color: #cccccc; /* subtle grey */
+  color: #cccccc;
   margin-top: 10px;
   font-style: italic;
 }
 
 .box h2 {
-  color: #ff4d6d; /* primary accent */
+  color: #ff4d6d;
   font-size: 1.8rem;
   margin-bottom: 1rem;
   text-shadow: 0 0 10px #ff4d6d;
@@ -248,19 +205,18 @@ audio { display: none; }
   color: #ffffffcc;
 }
 
-/* Rules */
 .box.rules ul li:nth-child(-n+3) {
-  color: #ff4d6d; /* strict rules red */
-  font-weight: bold;
-}
-.valid-rule {
-  color: #4caf50; /* green for positive rules */
+  color: #ff4d6d;
   font-weight: bold;
 }
 
-/* Dress code */
+.valid-rule {
+  color: #4caf50;
+  font-weight: bold;
+}
+
 .box.dress-code ul li .restriction {
-  color: #ff4d6d; /* highlight restrictions */
+  color: #ff4d6d;
   font-weight: bold;
 }
 
@@ -271,10 +227,17 @@ audio { display: none; }
   padding: 1.2rem 0;
   color: #ffffffcc;
   font-size: 0.9rem;
-  background: #111; /* solid background to hide particles in footer */
+  background: #111;
   border-top: 1px solid rgba(255,255,255,0.2);
   box-shadow: 0 -2px 10px rgba(0,0,0,0.4);
   margin-top: 3rem;
   position: relative;
   z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .event-header h1 { font-size: 3rem; }
+  .presented-by { font-size: 0.9rem; }
+  .unit-label { font-size: 1rem; }
 }
